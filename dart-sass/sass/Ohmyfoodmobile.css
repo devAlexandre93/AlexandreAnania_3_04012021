@@ -1,0 +1,29 @@
+body {
+  font-family: "Roboto";
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  margin: 0 0 0 0;
+}
+
+#photo1, #photo2, #photo3, #photo4 {
+  width: 80%;
+}
+
+#footertitle {
+  font-family: "Shrikhand";
+}
+
+#photopage1, #photopage2, #photopage3, #photopage4 {
+  width: 100%;
+}
+
+#titlemenu {
+  font-family: "Shrikhand";
+}
+/*# sourceMappingURL=Ohmyfoodmobile.css.map */
