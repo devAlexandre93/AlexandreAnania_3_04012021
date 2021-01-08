@@ -1,0 +1,330 @@
+body {
+  font-family: "Roboto";
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  margin: 0 0 0 0;
+}
+
+h1 {
+  margin: 0 0 0 0;
+  font-size: 1.3em;
+}
+
+input {
+  font: 400 1em roboto;
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+}
+
+header {
+  padding: 20px 0 10px 0;
+  border-bottom: solid 1.8px #aaaaaa;
+}
+
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 180px;
+}
+
+nav {
+  text-align: center;
+}
+
+#navtopitem {
+  background-color: #eaeaea;
+  color: #353535;
+  font-weight: bold;
+  font-size: 0.95em;
+  border-top: solid 1.8px #d2d2d2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#navtopitem p {
+  margin-right: 15px;
+}
+
+.fa-map-marker-alt {
+  margin-top: 14px;
+  margin-right: 15px;
+}
+
+#navblock {
+  background-color: #f6f6f6;
+  padding-top: 30px;
+  padding-bottom: 55px;
+  margin-bottom: 45px;
+}
+
+nav h1 {
+  line-height: 1.2em;
+  margin-bottom: 15px;
+}
+
+#navblock p {
+  color: #656565;
+  margin-bottom: 30px;
+}
+
+#navbtn {
+  background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  color: white;
+  padding: 15px 22px 15px 22px;
+  border-radius: 45px;
+  margin-left: 21%;
+  margin-right: 21%;
+  -webkit-box-shadow: 0px 3px 8px 3px #c8c8c8;
+          box-shadow: 0px 3px 8px 3px #c8c8c8;
+  font-size: 0.9em;
+  border: none;
+}
+
+#navbtn:hover {
+  -webkit-box-shadow: 0px 3px 8px 3px #787878;
+          box-shadow: 0px 3px 8px 3px #787878;
+  opacity: .75;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#primarycontainer h1 {
+  margin-left: 6%;
+  margin-bottom: 25px;
+}
+
+#primarycontainer p {
+  font-weight: bold;
+  font-size: 0.9em;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#primarycontainer {
+  margin-bottom: 65px;
+}
+
+.primaryconbtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f6f6f6;
+  margin-left: 7%;
+  margin-right: 7%;
+  margin-bottom: 25px;
+  border-radius: 20px;
+  padding-top: 9px;
+  padding-bottom: 8px;
+  -webkit-box-shadow: 0px 3px 8px 2px #e6e6e6;
+          box-shadow: 0px 3px 8px 2px #e6e6e6;
+}
+
+.primaryconbtn:hover {
+  background-color: #f5edff;
+}
+
+.primaryconbtn:hover .buttonicon {
+  color: #9356DC;
+}
+
+#n1 {
+  display: block;
+  margin-top: 16px;
+  font-size: 0.6em;
+  color: white;
+  background-color: #9356DC;
+  border-radius: 50%;
+  height: 14px;
+  width: 17px;
+  text-align: center;
+  padding-top: 3px;
+  margin-right: 25px;
+  margin-left: -9px;
+}
+
+#n2 {
+  display: block;
+  margin-top: 16px;
+  font-size: 0.6em;
+  color: white;
+  background-color: #9356DC;
+  border-radius: 50%;
+  height: 14px;
+  width: 17px;
+  text-align: center;
+  padding-top: 3px;
+  margin-right: 22px;
+  margin-left: -9px;
+}
+
+#n3 {
+  display: block;
+  margin-top: 16px;
+  font-size: 0.6em;
+  color: white;
+  background-color: #9356DC;
+  border-radius: 50%;
+  height: 14px;
+  width: 17px;
+  text-align: center;
+  padding-top: 3px;
+  margin-right: 22px;
+  margin-left: -9px;
+}
+
+.buttonicon {
+  margin-top: 17px;
+  font-size: 0.9em;
+  color: #7e7e7e;
+}
+
+.fa-mobile-alt {
+  margin-right: -60px;
+}
+
+.fa-list-ul {
+  margin-right: -77px;
+}
+
+.fa-store {
+  margin-right: -75px;
+}
+
+#secondarycontainer {
+  background-color: #f6f6f6;
+  padding-bottom: 45px;
+}
+
+#secondarycontainer h1 {
+  margin-left: 6%;
+  padding-top: 45px;
+  margin-bottom: 25px;
+}
+
+figure {
+  margin: 0 5% 20px 5%;
+  border-radius: 20px 20px 20px 20px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 3px 8px 2px #c8c8c8;
+          box-shadow: 0px 3px 8px 2px #c8c8c8;
+}
+
+figure:hover {
+  -webkit-box-shadow: 0px 3px 8px 3px #787878;
+          box-shadow: 0px 3px 8px 3px #787878;
+  opacity: .75;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+figcaption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  padding-bottom: 5px;
+  margin-top: -53.1px;
+}
+
+#figcapsecondphoto {
+  margin-top: -153px;
+}
+
+.restaurantnames {
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  font-size: 1.1em;
+}
+
+#secondarycontainer p {
+  margin-left: 10px;
+  margin-top: -7px;
+  margin-bottom: 10px;
+}
+
+.fa-heart {
+  font-size: 1.7em;
+  margin-right: 20px;
+  margin-top: -20px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+#firstphoto, #thirdphoto, #fourthphoto {
+  width: 100%;
+  position: relative;
+  bottom: 50px;
+}
+
+#secondphoto {
+  width: 100%;
+  position: relative;
+  bottom: 150px;
+}
+
+#secondarycontainer span {
+  background-color: #99E2D0;
+  border-radius: 3px;
+  font-size: 0.8em;
+  color: #008766;
+  font-weight: bold;
+  z-index: 1;
+  position: absolute;
+  margin-top: 17px;
+  padding: 5px 10px;
+  margin-left: 66%;
+}
+
+footer {
+  background-color: #383838;
+  color: white;
+  padding-left: 6%;
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+
+footer h1 {
+  font-family: "Shrikhand";
+  font-weight: normal;
+  font-weight: 1.2;
+  margin-bottom: 15px;
+}
+
+footer p {
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+
+.fa-utensils {
+  margin-right: 8px;
+  font-size: 0.8em;
+  margin-left: 2px;
+}
+
+.fa-hands-helping {
+  margin-right: 4px;
+  font-size: 0.8em;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+/*# sourceMappingURL=Ohmyfoodindex.css.map */

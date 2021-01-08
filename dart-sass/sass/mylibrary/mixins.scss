@@ -1,0 +1,31 @@
+@mixin button {
+    background: linear-gradient(to top left, $primary_color, $secondary_color); 
+    color: white; 
+    padding: 15px 22px 15px 22px; 
+    border-radius: 45px; 
+    margin-left: 21%; 
+    margin-right: 21%;
+    box-shadow: 0px 3px 8px 3px rgb(200, 200, 200);
+    font-size: 0.9em;
+    border: none;
+}
+
+@mixin buttonhover {
+    box-shadow: 0px 3px 8px 3px rgb(120, 120, 120); 
+    opacity: .75; 
+    transition: 1s;
+}
+
+@mixin numberscircle { 
+    display: block;
+    margin-top: 16px;
+    font-size: 0.6em;
+    color:white;
+    background-color: $primary_color;
+    border-radius: 50%;
+    height: 14px;
+    width: 17px;
+    text-align: center;
+    padding-top: 3px;
+
+}

@@ -1,0 +1,294 @@
+// Imports 
+
+    @import "mylibrary/variables.scss";
+    @import "mylibrary/mixins.scss";
+
+//* Fonts *//
+
+    body {
+        font-family: $font_text;
+    }
+
+//* Cancellation of the style of link, margin, h1 and input *//
+
+    a {
+        text-decoration: none; 
+        color: black ;
+    }
+
+    body {
+        margin: 0 0 0 0;
+    }
+
+    h1 {
+        margin: 0 0 0 0;
+        font-size: 1.3em;
+    }
+
+    input {
+        font: 400 1em roboto;
+        cursor: pointer;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+//* Header's style *//
+
+    header {
+        padding: 20px 0 10px 0;
+        border-bottom: solid 1.8px rgb(170, 170, 170);
+    }
+
+    #logo {
+        display: block;
+        margin-left: auto; 
+        margin-right: auto; 
+        width: 180px;
+    }
+
+//* Nav's style *// 
+
+    nav {
+        text-align: center;
+    }
+
+    #navtopitem {
+        background-color: rgb(234, 234, 234);
+        color: rgb(53, 53, 53);  
+        font-weight: bold; 
+        font-size: 0.95em; 
+        border-top: solid 1.8px rgb(210, 210, 210);
+        display: flex;
+        justify-content: center;    
+    }
+        
+    #navtopitem p {
+        margin-right: 15px;
+    }
+
+    .fa-map-marker-alt {
+        margin-top: 14px;
+        margin-right: 15px;
+    }
+
+    #navblock {
+        background-color: $background_color;
+        padding-top: 30px; 
+        padding-bottom: 55px; 
+        margin-bottom: 45px;
+    }
+
+    nav h1 {
+        line-height: 1.2em; 
+        margin-bottom: 15px;
+    }
+
+    #navblock p {
+        color:  rgb(101, 101, 101); 
+        margin-bottom: 30px;
+    }
+
+    #navbtn {
+        @include button
+    }
+
+    #navbtn:hover {
+        @include buttonhover
+    }
+
+//Primary container syle *//
+
+    #primarycontainer h1 {
+        margin-left: 6%;
+        margin-bottom: 25px;
+    }
+
+    #primarycontainer p {
+        font-weight: bold;
+        font-size: 0.9em;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #primarycontainer {
+        margin-bottom: 65px;
+    }
+
+    .primaryconbtn {
+        display: flex;
+        background-color: $background_color;
+        margin-left: 7%;
+        margin-right: 7%;
+        margin-bottom: 25px;
+        border-radius: 20px;
+        padding-top: 9px;
+        padding-bottom: 8px;
+        box-shadow: 0px 3px 8px 2px rgb(230, 230, 230); 
+    }
+
+    .primaryconbtn:hover {
+        background-color: rgb(245, 237, 255);
+    }
+
+    .primaryconbtn:hover .buttonicon {
+        color: $primary_color;
+    }
+
+    #n1 {
+        @include numberscircle;
+        margin-right: 25px;
+        margin-left: -9px;
+    }
+
+    #n2 {
+        @include numberscircle;
+        margin-right: 22px;
+        margin-left: -9px;
+    }
+
+    #n3 {
+        @include numberscircle;
+        margin-right: 22px;
+        margin-left: -9px;
+    }
+
+    .buttonicon {
+        margin-top: 17px;
+        font-size: 0.9em;
+        color: rgb(126, 126, 126);
+    } 
+
+    .fa-mobile-alt {
+        margin-right: -60px;
+    }
+
+    .fa-list-ul{
+        margin-right: -77px;
+    }
+
+    .fa-store{
+        margin-right: -75px;
+    }
+
+//* Secondary container style *//
+
+    #secondarycontainer {
+        background-color: $background_color;
+        padding-bottom: 45px;
+    }
+
+    #secondarycontainer h1 {
+        margin-left: 6%;
+        padding-top: 45px;
+        margin-bottom: 25px;
+    }
+
+    figure {
+        margin: 0 5% 20px 5%;
+        border-radius: 20px 20px 20px 20px;
+        overflow: hidden; 
+        box-shadow: 0px 3px 8px 2px rgb(200, 200, 200);
+    }
+
+    figure:hover {
+        @include buttonhover
+    }
+
+    figcaption {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding-bottom: 5px;
+        margin-top: -53.1px;
+    }
+
+    #figcapsecondphoto {
+        margin-top: -153px;
+    }
+
+
+    .restaurantnames {
+        margin-top: 15px;
+        margin-left: 10px;
+        margin-bottom: 5px;
+        font-size: 1.1em;
+    }
+
+    #secondarycontainer p {
+        margin-left: 10px;
+        margin-top: -7px;
+        margin-bottom: 10px;
+    }
+
+    .fa-heart {
+        font-size: 1.7em;
+        margin-right: 20px;
+        margin-top: -20px;
+        align-self: flex-end;
+    }
+
+    #firstphoto, #thirdphoto, #fourthphoto {
+        width: 100%;
+        position: relative;
+        bottom: 50px;
+    }
+
+    #secondphoto {
+
+        width: 100%;
+        position: relative;
+        bottom: 150px;
+    }
+
+    #secondarycontainer span {
+        background-color: $tertiary_color;
+        border-radius: 3px;
+        font-size: 0.8em;
+        color: rgb(0, 135, 102);
+        font-weight: bold;
+        z-index: 1;
+        position: absolute;
+        margin-top: 17px;
+        padding : 5px 10px;
+        margin-left: 66%;
+    }
+
+//* Footer's style *//
+
+    footer {
+        background-color: $footer_color; 
+        color: white;
+        padding-left: 6%;
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+
+    footer h1 {
+        font-family: $font_title; 
+        font-weight: normal; 
+        font-weight: 1.2;
+        margin-bottom: 15px;
+    }
+
+    footer p {
+        margin-top: 0px;
+        margin-bottom: 8px;
+    }
+
+    .fa-utensils {
+        margin-right: 8px;
+        font-size: 0.8em;
+        margin-left: 2px;
+    }
+
+    .fa-hands-helping {
+        margin-right: 4px;
+        font-size: 0.8em;
+        transform: rotate(-10deg);
+    }
+
+
+
+
