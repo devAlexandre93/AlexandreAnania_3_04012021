@@ -1,0 +1,220 @@
+body {
+  font-family: "Roboto";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  margin: 0 0 0 0;
+}
+
+h1 {
+  margin: 0 0 0 0;
+  font-size: 1.3em;
+}
+
+input {
+  font: 400 1em roboto;
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+}
+
+header {
+  padding-top: 20px;
+  overflow: hidden;
+}
+
+.fa-arrow-left {
+  position: absolute;
+  margin-left: 7%;
+  font-size: 1.3em;
+  margin-top: 6px;
+}
+
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 180px;
+  margin-bottom: 10px;
+}
+
+#firstphoto, #thirdphoto, #fourthphoto {
+  width: 108%;
+}
+
+#secondphoto {
+  width: 100%;
+}
+
+section {
+  background-color: #f6f6f6;
+  z-index: 1;
+  border-radius: 30px 30px 0 0;
+  padding-top: 25px;
+}
+
+#primarycontainer {
+  margin-top: -56px;
+}
+
+#primarycontainermenu2 {
+  margin-top: -104px;
+}
+
+.item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 6%;
+  margin-bottom: -8px;
+}
+
+section h1 {
+  font-family: "Shrikhand";
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+.fa-heart {
+  font-size: 1.6em;
+  margin-top: 3px;
+  margin-right: 12%;
+}
+
+h2 {
+  font-size: 1.1em;
+  font-weight: normal;
+  margin-bottom: 5px;
+  margin-top: 35px;
+  margin-left: 6%;
+}
+
+.greenline {
+  border-top: solid 3px #99E2D0;
+  width: 42px;
+  margin-top: 0px;
+  margin-left: 6%;
+}
+
+.block {
+  -webkit-box-shadow: 0px 3px 8px 2px #ebebeb;
+          box-shadow: 0px 3px 8px 2px #ebebeb;
+  border-radius: 15px 15px 15px 15px;
+  margin-left: 4%;
+  margin-right: 4%;
+  background-color: white;
+  margin-top: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+h3 {
+  margin: 0 0 0 0;
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+
+.subblock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.block p {
+  margin: 0 0 0 0;
+  font-size: 0.9em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.price {
+  font-size: 0.9em;
+  font-weight: bold;
+  padding-left: 25px;
+}
+
+#orderbtn {
+  background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  color: white;
+  border-radius: 45px;
+  -webkit-box-shadow: 0px 3px 8px 3px #c8c8c8;
+          box-shadow: 0px 3px 8px 3px #c8c8c8;
+  font-size: 0.9em;
+  border: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 45px;
+  margin-bottom: 75px;
+  padding: 15px 50px;
+}
+
+#orderbtn:hover {
+  -webkit-box-shadow: 0px 3px 8px 3px #787878;
+          box-shadow: 0px 3px 8px 3px #787878;
+  opacity: .75;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+footer {
+  background-color: #383838;
+  color: white;
+  padding-left: 6%;
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+
+footer h1 {
+  font-family: "Shrikhand";
+  font-weight: normal;
+  font-weight: 1.2;
+  margin-bottom: 15px;
+}
+
+footer p {
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+
+.fa-utensils {
+  margin-right: 8px;
+  font-size: 0.8em;
+  margin-left: 2px;
+}
+
+.fa-hands-helping {
+  margin-right: 4px;
+  font-size: 0.8em;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+/*# sourceMappingURL=Ohmyfoodmenu.css.map */

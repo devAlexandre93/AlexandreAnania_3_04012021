@@ -85,14 +85,12 @@ nav h1 {
   background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
   background: linear-gradient(to top left, #9356DC, #FF79DA);
   color: white;
-  padding: 15px 22px 15px 22px;
   border-radius: 45px;
-  margin-left: 21%;
-  margin-right: 21%;
   -webkit-box-shadow: 0px 3px 8px 3px #c8c8c8;
           box-shadow: 0px 3px 8px 3px #c8c8c8;
   font-size: 0.9em;
   border: none;
+  padding: 15px 22px;
 }
 
 #navbtn:hover {

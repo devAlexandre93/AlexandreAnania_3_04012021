@@ -18,74 +18,98 @@
       <header> <!-- Contient le logo + la flèche -->
          <a href="index.html"> <i class="fas fa-arrow-left"></i> </a>
          <img id="logo" src="images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood">
-         <img id="fourth4" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo Le délice des sens"/>
+         <img id="fourthphoto" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo Le délice des sens"/>
       </header>     
             
       <section id="primarycontainer"> <!-- Contient le menu -->
-         <h1> Le délice des sens <i class="far fa-heart"></i> </h1>
-         <h2> Entrées </h2>
+         <div class="item">
+            <h1> Le délice des sens </h1>
+            <i class="far fa-heart"></i>
+         </div>
+         <h2> ENTRÉES </h2>
+         <div class="greenline"></div>
          <div class="block">
             <h3> Tartare de thon </h3>
-            <p> Assaisonné au yuzu </p>
-            <div class="price"> 25€</div>
+            <div class="subblock">
+               <p> Assaisonné au yuzu </p>
+               <div class="price"> 25€</div>
+            </div>   
          </div>
          <div class="block">
             <h3> Bouchée de homard croustillant </h3>
-            <p> Et sa farandole de petits légumes </p>
-            <div class="price"> 35€</div>
+            <div class="subblock">
+               <p> Et sa farandole de petits légumes </p>
+               <div class="price"> 35€</div>
+            </div>   
          </div>
          <div class="block">
             <h3> Velouté de cèpes </h3>
-            <p> Aux truffes </p>
-            <div class="price"> 20€</div>
+            <div class="subblock">
+               <p> Aux truffes </p>
+               <div class="price"> 20€</div>
+            </div>   
          </div>
-         <h2> Plats </h2>
+         <h2> PLATS </h2>
+         <div class="greenline"></div>
          <div class="block">
             <h3>Poulet rôti aux herbes de Provence </h3>
-            <p> Et sa crème de truffe </p>
-            <div class="price"> 40€</div>
+            <div class="subblock">
+               <p> Et sa crème de truffe </p>
+               <div class="price"> 40€</div>
+            </div>   
          </div>
             <div class="block">
                <h3>Langouste rôtie </h3>
-               <p> Et ses légumes de saison </p>
-               <div class="price"> 35€</div>
+               <div class="subblock">
+                  <p> Et ses légumes de saison </p>
+                  <div class="price"> 35€</div>
+               </div>   
             </div>
             <div class="block">
                <h3> Côte de boeuf Angus </h3>
-               <p> Et sa purée de panais </p>
-               <div class="price"> 44€</div>
+               <div class="subblock">
+                  <p> Et sa purée de panais </p>
+                  <div class="price"> 44€</div>
+               </div>   
             </div>
-            <h2> Desserts </h2>
+            <h2> DESSERTS </h2>
+            <div class="greenline"></div>
             <div class="block">
                <h3> Farandole de desserts </h3>
-               <p> Du chef </p>
-               <div class="price"> 18€</div>
+               <div class="subblock">
+                  <p> Du chef </p>
+                  <div class="price"> 18€</div>
+               </div>   
             </div>
             <div class="block">
                <h3> Crème brulée </h3>
-               <p> Revisitée </p>
-               <div class="price"> 22€</div>
+               <div class="subblock">
+                  <p> Revisitée </p>
+                  <div class="price"> 22€</div>
+               </div>   
             </div>
             <div class="block">
                <h3> Tiramisu </h3>
-               <p> À la noisette </p>
-               <div class="price"> 23€</div>
+               <div class="subblock">
+                  <p> À la noisette </p>
+                  <div class="price"> 23€</div>
+               </div>   
             </div>
             <input id="orderbtn" type="button" value="Commander" onclick="window.location.href =''"/>
          </section>
 
       <footer> <!--Contient "Proposer un restaurant", "Devenir partenaire",... -->
          <h1> ohmyfood </h1>
-         <div class="footerscat"> 
-            <i class="fas fa-utensils"></i> <p> Proposer un restaurant </p>
+         <div class="footercateg">  
+            <p> <i class="fas fa-utensils"></i> Proposer un restaurant </p>
          </div>
-         <div class="footerscat">
-            <i class="fas fa-hands-helping"></i> <p> Devenir partenaire </p>
+         <div class="footercateg"> 
+            <p> <i class="fas fa-hands-helping"></i> Devenir partenaire </p>
          </div>
-         <div class="footerscat">
+         <div class="footercateg">
             <p> Mentions légales </p>
          </div>
-         <div class="footerscat">
+         <div class="footercateg">
             <p> Contact </p> 
          </div>
       </footer>

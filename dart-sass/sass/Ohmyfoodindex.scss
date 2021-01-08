@@ -91,11 +91,12 @@
     }
 
     #navbtn {
-        @include button
+        @include button;
+        padding: 15px 22px;
     }
 
     #navbtn:hover {
-        @include buttonhover
+        @include buttonhover;
     }
 
 //Primary container syle *//

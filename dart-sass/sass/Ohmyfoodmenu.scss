@@ -1,0 +1,207 @@
+// Imports 
+
+    @import "mylibrary/variables.scss";
+    @import "mylibrary/mixins.scss";
+
+//* Fonts *//
+
+    body {
+        font-family: $font_text;
+        display: flex;
+        flex-direction: column;
+    }
+
+//* Cancellation of the style of link, margin, h1 and input *//
+
+    a {
+        text-decoration: none; 
+        color: black ;
+    }
+
+    body {
+        margin: 0 0 0 0;
+    }
+
+    h1 {
+        margin: 0 0 0 0;
+        font-size: 1.3em;
+    }
+
+    input {
+        font: 400 1em roboto;
+        cursor: pointer;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+//* Header's style *//
+
+    header {
+        padding-top:20px ;
+        overflow: hidden;}
+
+    .fa-arrow-left {
+        position: absolute;
+        margin-left: 7%;
+        font-size: 1.3em;
+        margin-top: 6px;
+    }
+
+    #logo {
+        display: block;
+        margin-left: auto; 
+        margin-right: auto; 
+        width: 180px;
+        margin-bottom: 10px;
+    }
+
+    #firstphoto, #thirdphoto, #fourthphoto {
+        width: 108%;
+    }
+
+    #secondphoto {
+        width: 100%;
+    }
+
+//* Style's primary container *//
+
+    section {
+        background-color: $background_color;
+        z-index: 1;
+        border-radius: 30px 30px 0 0;
+        padding-top: 25px;
+    }
+
+    #primarycontainer {
+        margin-top: -56px;
+    }
+
+    #primarycontainermenu2 {
+        margin-top: -104px;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between ;
+        margin-left: 6%;
+        margin-bottom: -8px;
+    }
+
+    section h1 {
+        font-family: $font_title;
+        font-size: 1.5em;
+        font-weight: normal;
+    }
+
+    .fa-heart {
+        font-size: 1.6em;
+        margin-top: 3px;
+        margin-right: 12%;
+
+    }
+
+    h2 {
+        font-size: 1.1em;
+        font-weight: normal;
+        margin-bottom: 5px;
+        margin-top: 35px;
+        margin-left: 6%;
+    }
+
+    .greenline {
+        border-top: solid 3px $tertiary_color;
+        width: 42px;
+        margin-top: 0px;
+        margin-left: 6%;
+    }
+
+    .block {
+        box-shadow: 0px 3px 8px 2px rgb(235, 235, 235);
+        border-radius: 15px 15px 15px 15px;
+        margin-left: 4%;
+        margin-right: 4%;
+        background-color: white;
+        margin-top: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 20px;
+    }
+
+    h3 {
+        margin: 0 0 0 0;
+        font-size: 1em;
+        margin-bottom: 5px;
+    }
+
+    .subblock {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .block p {
+        margin: 0 0 0 0;
+        font-size: 0.9em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .price {
+        font-size: 0.9em;
+        font-weight: bold;
+        padding-left: 25px
+    }
+
+    #orderbtn {
+        @include button;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 45px;
+        margin-bottom: 75px;
+        padding: 15px 50px;
+    }
+
+    #orderbtn:hover {
+        @include buttonhover;
+    }
+    
+
+//* Footer's style *//
+
+    footer {
+        background-color: $footer_color; 
+        color: white;
+        padding-left: 6%;
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+
+    footer h1 {
+        font-family: $font_title; 
+        font-weight: normal; 
+        font-weight: 1.2;
+        margin-bottom: 15px;
+    }
+
+    footer p {
+        margin-top: 0px;
+        margin-bottom: 8px;
+    }
+
+    .fa-utensils {
+        margin-right: 8px;
+        font-size: 0.8em;
+        margin-left: 2px;
+    }
+
+    .fa-hands-helping {
+        margin-right: 4px;
+        font-size: 0.8em;
+        transform: rotate(-10deg);
+    }
+
