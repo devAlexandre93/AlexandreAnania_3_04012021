@@ -125,21 +125,19 @@
         margin-right: 4%;
         background-color: white;
         margin-top: 15px;
-        padding-top: 10px;
-        padding-bottom: 10px;
         padding-left: 10px;
-        padding-right: 20px;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
     }
 
     h3 {
         margin: 0 0 0 0;
         font-size: 1em;
         margin-bottom: 5px;
-    }
-
-    .subblock {
-        display: flex;
-        justify-content: space-between;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .block p {
@@ -150,12 +148,60 @@
         white-space: nowrap;
     }
 
+    .primarysubblock {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        overflow: hidden;
+    }
+
+    .secondarysubblock {
+        display: flex;
+        flex-direction: flex-end;
+        transition: all 0.5s ease-in-out;
+    }
+
     .price {
         font-size: 0.9em;
         font-weight: bold;
-        padding-left: 25px
+        margin-top: 37px;
+        padding-left: 25px;
+        padding-right: 20px;
+        transition: all 0.5s ease-in-out; 
     }
 
+    .checkbox {
+        display: flex;
+        background-color: #99E2D0;
+        width: 55px;
+        justify-content: center;
+        align-items: center;
+        margin-left: -55px;
+        transform: translate(55px);
+        transition: all 0.6s ease-in-out;   
+    }
+
+    .fa-check-circle {
+        font-size: 1.2em;
+        color: white;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .block:hover .checkbox {
+        transform: translate(0px);
+    }
+
+    .block:hover .fa-check-circle {
+        transform: rotate(720deg);
+    }
+
+    .block:hover .price {
+        transform: translate(-55px);
+    }
+
+    .block:hover .secondarysubblock {
+        padding-left: 38px;
+    }
+    
     #orderbtn {
         @include button;
         display: block;
