@@ -2,6 +2,7 @@
 
     @import "mylibrary/variables.scss";
     @import "mylibrary/mixins.scss";
+    @import "mylibrary/animations.scss";
 
 //* Fonts *//
 
@@ -32,6 +33,55 @@
 
     input:focus {
         outline: none;
+    }
+
+//* Loader's style *// 
+
+    .loader {
+        position: fixed;
+        background: white;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: -1;
+        animation: 5s whitescreen;
+    }
+
+    .dotsbox {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 50%;
+    }
+
+    .fa-circle {
+        font-size: 1.6em;
+        margin-right: 2px;
+        animation: 1.5s dotsgone infinite ease-in-out both;
+    }
+
+    .circle1 {
+        color: $primary_color;
+    }
+
+    .circle2 {
+        color: $secondary_color;
+        animation-delay: 0.2s;
+    }
+
+    .circle3 {
+        color: $tertiary_color;
+        animation-delay: 0.4s;
+    }
+
+    .circle4 {
+        color: $secondary_color;
+        animation-delay: 0.6s;
+    }
+
+    .circle5 {
+        color: $primary_color;
+        animation-delay: 0.8s;
     }
 
 //* Header's style *//
@@ -212,23 +262,56 @@
 
     .restaurantnames {
         margin-top: 15px;
-        margin-left: 10px;
+        margin-left: 15px;
         margin-bottom: 5px;
         font-size: 1.1em;
     }
 
     #secondarycontainer p {
-        margin-left: 10px;
-        margin-top: -7px;
+        margin-left: 15px;
+        margin-top: 14px;
         margin-bottom: 10px;
     }
 
-    .fa-heart {
-        font-size: 1.7em;
-        margin-right: 20px;
-        margin-top: -20px;
+    .hearts {
+        font-size: 1.6em;
+        margin-right: 50px;
+        margin-top: -16px;
         align-self: flex-end;
     }
+
+    .far.fa-heart {
+        position: absolute;
+        padding-left: 1px;
+        padding-right: 1px;
+        z-index: 2;
+        &:hover {
+          transition: color 0.6s ease;
+          color: transparent;
+        }
+    }
+
+    .post-it {
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        background: white;
+        transition: all 0.4s ease-in-out;
+        z-index: 1;
+    }
+
+    .fas.fa-heart {
+        position: absolute;
+        padding-left: 1px;
+        padding-right: 1px;
+        background: linear-gradient(to top, $secondary_color, $primary_color);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    .far.fa-heart:hover + .post-it {
+        transform: translate(0px, -26px);
+      }
 
     #firstphoto, #thirdphoto, #fourthphoto {
         width: 100%;

@@ -96,10 +96,48 @@ section h1 {
   font-weight: normal;
 }
 
-.fa-heart {
+.hearts {
   font-size: 1.6em;
   margin-top: 3px;
-  margin-right: 12%;
+  margin-right: 20%;
+}
+
+.far.fa-heart {
+  position: absolute;
+  padding-left: 1px;
+  padding-right: 1px;
+  z-index: 2;
+}
+
+.far.fa-heart:hover {
+  -webkit-transition: color 0.6s ease;
+  transition: color 0.6s ease;
+  color: transparent;
+}
+
+.post-it {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background: #f6f6f6;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  z-index: 1;
+}
+
+.fas.fa-heart {
+  position: absolute;
+  padding-left: 1px;
+  padding-right: 1px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to top, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.far.fa-heart:hover + .post-it {
+  -webkit-transform: translate(0px, -26px);
+          transform: translate(0px, -26px);
 }
 
 h2 {
@@ -166,8 +204,8 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: flex-end;
           flex-direction: flex-end;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 
 .price {
@@ -176,8 +214,8 @@ h3 {
   margin-top: 37px;
   padding-left: 25px;
   padding-right: 20px;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 
 .checkbox {
@@ -202,8 +240,8 @@ h3 {
 .fa-check-circle {
   font-size: 1.2em;
   color: white;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 
 .block:hover .checkbox {
