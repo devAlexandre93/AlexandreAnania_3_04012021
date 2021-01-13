@@ -44,7 +44,7 @@
         height: 100%;
         opacity: 0;
         z-index: -1;
-        animation: 5s whitescreen;
+        animation: 5s hidescreen;
     }
 
     .dotsbox {
@@ -57,7 +57,7 @@
     .fa-circle {
         font-size: 1.6em;
         margin-right: 2px;
-        animation: 1.5s dotsgone infinite ease-in-out both;
+        animation: 1.5s dotsgone infinite ease-in-out backwards;
     }
 
     .circle1 {
@@ -151,6 +151,18 @@
 
 //Primary container syle *//
 
+    #primarycontainer {
+        margin-bottom: 65px;
+    }
+
+    .containerbutton {
+        @media all and (min-width: 768px) {
+            display: flex;
+            margin-left: 6%;
+            margin-right: 6%;
+        }
+    }
+
     #primarycontainer h1 {
         margin-left: 6%;
         margin-bottom: 25px;
@@ -161,10 +173,8 @@
         font-size: 0.9em;
         margin-right: auto;
         margin-left: auto;
-    }
-
-    #primarycontainer {
-        margin-bottom: 65px;
+        @media all and (min-width: 768px) {
+        }       
     }
 
     .primaryconbtn {
@@ -176,7 +186,19 @@
         border-radius: 20px;
         padding-top: 9px;
         padding-bottom: 8px;
-        box-shadow: 0px 3px 8px 2px rgb(230, 230, 230); 
+        box-shadow: 0px 3px 8px 2px rgb(230, 230, 230);
+        @media all and (min-width: 768px) {
+            width: 33%;
+            justify-content: center;
+            margin: 0 0 0 0;
+            &:nth-of-type(1) {
+                margin-right: 20px;
+            }
+            &:nth-of-type(2) {
+                margin-right: 20px;
+            }
+
+        }
     }
 
     .primaryconbtn:hover {
@@ -185,6 +207,9 @@
 
     .primaryconbtn:hover .buttonicon {
         color: $primary_color;
+        @media all and (min-width: 768px) and (max-width:1000px) {
+            color: transparent;
+        }    
     }
 
     #n1 {
@@ -209,18 +234,21 @@
         margin-top: 17px;
         font-size: 0.9em;
         color: rgb(126, 126, 126);
+        @media all and (min-width: 768px) and (max-width:1000px) {
+            color: transparent;
+        }   
     } 
 
     .fa-mobile-alt {
-        margin-right: -60px;
+        margin-right: -50px;
     }
 
     .fa-list-ul{
-        margin-right: -77px;
+        margin-right: -67px;
     }
 
     .fa-store{
-        margin-right: -75px;
+        margin-right: -65px;
     }
 
 //* Secondary container style *//
@@ -228,19 +256,39 @@
     #secondarycontainer {
         background-color: $background_color;
         padding-bottom: 45px;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
+    #itemsline1 {
+        @media all and (min-width: 768px) {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
+    #itemsline2 {
+        @media all and (min-width: 768px) {
+            display: flex;
+        }
+    }
+
+
     #secondarycontainer h1 {
-        margin-left: 6%;
+        margin-left: 1%;
         padding-top: 45px;
         margin-bottom: 25px;
     }
 
     figure {
-        margin: 0 5% 20px 5%;
+        margin: 0 0 20px 0;
         border-radius: 20px 20px 20px 20px;
         overflow: hidden; 
         box-shadow: 0px 3px 8px 2px rgb(200, 200, 200);
+        @media all and (min-width: 768px) {
+            margin-left: 10px;
+            margin-right: 10px; 
+        }
     }
 
     figure:hover {
@@ -254,11 +302,6 @@
         padding-bottom: 5px;
         margin-top: -53.1px;
     }
-
-    #figcapsecondphoto {
-        margin-top: -153px;
-    }
-
 
     .restaurantnames {
         margin-top: 15px;
@@ -313,20 +356,13 @@
         transform: translate(0px, -26px);
       }
 
-    #firstphoto, #thirdphoto, #fourthphoto {
+    #firstphoto, #secondphoto, #thirdphoto, #fourthphoto {
         width: 100%;
         position: relative;
         bottom: 50px;
     }
 
-    #secondphoto {
-
-        width: 100%;
-        position: relative;
-        bottom: 150px;
-    }
-
-    #secondarycontainer span {
+    #firstnew, #secondnew {
         background-color: $tertiary_color;
         border-radius: 3px;
         font-size: 0.8em;
@@ -336,7 +372,31 @@
         position: absolute;
         margin-top: 17px;
         padding : 5px 10px;
-        margin-left: 66%;
+        right: 10%;
+        @media all and (min-width:431px) {
+            font-size: 0.9em;        
+        }
+        @media all and (min-width:516px) {
+            font-size: 1em;        
+        }
+        @media all and (min-width:621px) {
+            font-size: 1.1em;        
+        }
+        @media all and (min-width:768px) {
+            font-size: 0.9em;        
+        }
+        @media all and (min-width:900px) {
+            font-size: 1em;        
+        }
+        @media all and (min-width:1080px) {
+            font-size: 1em;        
+        }
+    }
+
+    #firstnew {
+        @media all and (min-width:768px) {
+            right:55%        
+        }
     }
 
 //* Footer's style *//

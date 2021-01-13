@@ -2,6 +2,7 @@
 
     @import "mylibrary/variables.scss";
     @import "mylibrary/mixins.scss";
+    @import "mylibrary/animations.scss";
 
 //* Fonts *//
 
@@ -36,11 +37,11 @@
         outline: none;
     }
 
-//* Header's style *//
+//* Header and article style *//
 
     header {
         padding-top:20px ;
-        overflow: hidden;}
+    }
 
     .fa-arrow-left {
         position: absolute;
@@ -54,15 +55,39 @@
         margin-left: auto; 
         margin-right: auto; 
         width: 180px;
-        margin-bottom: 10px;
+        margin-bottom: 13px;
     }
 
-    #firstphoto, #thirdphoto, #fourthphoto {
+    #firstphoto, #secondphoto, #thirdphoto, #fourthphoto {
         width: 108%;
+        @media all and (min-width: 768px) {
+            width: 104%;
+            position: relative;
+            bottom: 90px;
+        }
+        @media all and (min-width: 860px) {
+            width: 104%;
+            position: relative;
+            bottom: 130px;
+        }
+        @media all and (min-width: 985px) {
+            width: 104%;
+            position: relative;
+            bottom: 190px;
+        }
+        @media all and (min-width: 1090px) {
+            width: 104%;
+            position: relative;
+            bottom: 280px;
+        }
     }
 
-    #secondphoto {
-        width: 100%;
+    article {
+        overflow: hidden;
+        @media all and (min-width: 768px) {
+            width: 100%;
+            height: 450px;
+        }    
     }
 
 //* Style's primary container *//
@@ -74,21 +99,37 @@
         padding-top: 25px;
     }
 
-    #primarycontainer {
+    .primarycontainer {
         margin-top: -56px;
-    }
-
-    #primarycontainermenu2 {
-        margin-top: -104px;
     }
 
     .item {
         display: flex;
         flex-direction: row;
-        justify-content: space-between ;
+        justify-content: space-between;
         margin-left: 6%;
         margin-bottom: -8px;
+        @media all and (min-width: 768px) {
+            justify-content: center;
+            margin-left: 0%;
+        }
     }
+
+    .flexbox {
+        @media all and (min-width: 768px) {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+    .firstblocks, .secondblocks, .lastblocks {
+        @media all and (min-width: 768px) {
+            width: 33%;
+        }
+    }
+
+
 
     section h1 {
         font-family: $font_title;
@@ -100,6 +141,10 @@
         font-size: 1.6em;
         margin-top: 3px;
         margin-right: 20%;
+        @media all and (min-width: 768px) {
+            margin-right: 0px;
+            margin-left: 40px;
+        }
     }
 
     .far.fa-heart {
@@ -160,7 +205,18 @@
         padding-left: 10px;
         overflow: hidden;
         display: flex;
+        opacity: 1;
         justify-content: space-between;
+        animation: 0.4s menuarrival ease-out backwards;
+        &:nth-of-type(3) {
+            animation-delay: 0.2s;
+        }    
+        &:nth-of-type(4) {
+            animation-delay: 0.4s;
+        }    
+        &:nth-of-type(5) {
+            animation-delay: 0.6s;
+        }  
     }
 
     h3 {
@@ -233,6 +289,7 @@
     .block:hover .secondarysubblock {
         padding-left: 38px;
     }
+
     
     #orderbtn {
         @include button;

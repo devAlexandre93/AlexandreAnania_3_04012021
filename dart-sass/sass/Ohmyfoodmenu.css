@@ -1,3 +1,107 @@
+@-webkit-keyframes hidescreen {
+  0% {
+    opacity: 1;
+    z-index: 3;
+  }
+  90% {
+    opacity: 1;
+    z-index: 3;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes hidescreen {
+  0% {
+    opacity: 1;
+    z-index: 3;
+  }
+  90% {
+    opacity: 1;
+    z-index: 3;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@-webkit-keyframes loadingspinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loadingspinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes dotsgone {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes dotsgone {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes menuarrival {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes menuarrival {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
 body {
   font-family: "Roboto";
   display: -webkit-box;
@@ -34,7 +138,6 @@ input:focus {
 
 header {
   padding-top: 20px;
-  overflow: hidden;
 }
 
 .fa-arrow-left {
@@ -49,15 +152,54 @@ header {
   margin-left: auto;
   margin-right: auto;
   width: 180px;
-  margin-bottom: 10px;
+  margin-bottom: 13px;
 }
 
-#firstphoto, #thirdphoto, #fourthphoto {
+#firstphoto, #secondphoto, #thirdphoto, #fourthphoto {
   width: 108%;
 }
 
-#secondphoto {
-  width: 100%;
+@media all and (min-width: 768px) {
+  #firstphoto, #secondphoto, #thirdphoto, #fourthphoto {
+    width: 104%;
+    position: relative;
+    bottom: 90px;
+  }
+}
+
+@media all and (min-width: 860px) {
+  #firstphoto, #secondphoto, #thirdphoto, #fourthphoto {
+    width: 104%;
+    position: relative;
+    bottom: 130px;
+  }
+}
+
+@media all and (min-width: 985px) {
+  #firstphoto, #secondphoto, #thirdphoto, #fourthphoto {
+    width: 104%;
+    position: relative;
+    bottom: 190px;
+  }
+}
+
+@media all and (min-width: 1090px) {
+  #firstphoto, #secondphoto, #thirdphoto, #fourthphoto {
+    width: 104%;
+    position: relative;
+    bottom: 280px;
+  }
+}
+
+article {
+  overflow: hidden;
+}
+
+@media all and (min-width: 768px) {
+  article {
+    width: 100%;
+    height: 450px;
+  }
 }
 
 section {
@@ -67,12 +209,8 @@ section {
   padding-top: 25px;
 }
 
-#primarycontainer {
+.primarycontainer {
   margin-top: -56px;
-}
-
-#primarycontainermenu2 {
-  margin-top: -104px;
 }
 
 .item {
@@ -90,6 +228,33 @@ section {
   margin-bottom: -8px;
 }
 
+@media all and (min-width: 768px) {
+  .item {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 0%;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .flexbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .firstblocks, .secondblocks, .lastblocks {
+    width: 33%;
+  }
+}
+
 section h1 {
   font-family: "Shrikhand";
   font-size: 1.5em;
@@ -100,6 +265,13 @@ section h1 {
   font-size: 1.6em;
   margin-top: 3px;
   margin-right: 20%;
+}
+
+@media all and (min-width: 768px) {
+  .hearts {
+    margin-right: 0px;
+    margin-left: 40px;
+  }
 }
 
 .far.fa-heart {
@@ -168,9 +340,27 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  opacity: 1;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-animation: 0.4s menuarrival ease-out backwards;
+          animation: 0.4s menuarrival ease-out backwards;
+}
+
+.block:nth-of-type(3) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.block:nth-of-type(4) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.block:nth-of-type(5) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
 }
 
 h3 {

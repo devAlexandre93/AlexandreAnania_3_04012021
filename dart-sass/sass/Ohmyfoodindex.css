@@ -1,4 +1,4 @@
-@-webkit-keyframes whitescreen {
+@-webkit-keyframes hidescreen {
   0% {
     opacity: 1;
     z-index: 3;
@@ -13,7 +13,7 @@
   }
 }
 
-@keyframes whitescreen {
+@keyframes hidescreen {
   0% {
     opacity: 1;
     z-index: 3;
@@ -72,6 +72,36 @@
   }
 }
 
+@-webkit-keyframes menuarrival {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes menuarrival {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
 body {
   font-family: "Roboto";
 }
@@ -106,8 +136,8 @@ input:focus {
   height: 100%;
   opacity: 0;
   z-index: -1;
-  -webkit-animation: 5s whitescreen;
-          animation: 5s whitescreen;
+  -webkit-animation: 5s hidescreen;
+          animation: 5s hidescreen;
 }
 
 .dotsbox {
@@ -120,8 +150,8 @@ input:focus {
 .fa-circle {
   font-size: 1.6em;
   margin-right: 2px;
-  -webkit-animation: 1.5s dotsgone infinite ease-in-out both;
-          animation: 1.5s dotsgone infinite ease-in-out both;
+  -webkit-animation: 1.5s dotsgone infinite ease-in-out backwards;
+          animation: 1.5s dotsgone infinite ease-in-out backwards;
 }
 
 .circle1 {
@@ -228,6 +258,20 @@ nav h1 {
   transition: 1s;
 }
 
+#primarycontainer {
+  margin-bottom: 65px;
+}
+
+@media all and (min-width: 768px) {
+  .containerbutton {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+}
+
 #primarycontainer h1 {
   margin-left: 6%;
   margin-bottom: 25px;
@@ -238,10 +282,6 @@ nav h1 {
   font-size: 0.9em;
   margin-right: auto;
   margin-left: auto;
-}
-
-#primarycontainer {
-  margin-bottom: 65px;
 }
 
 .primaryconbtn {
@@ -259,12 +299,34 @@ nav h1 {
           box-shadow: 0px 3px 8px 2px #e6e6e6;
 }
 
+@media all and (min-width: 768px) {
+  .primaryconbtn {
+    width: 33%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 0 0 0;
+  }
+  .primaryconbtn:nth-of-type(1) {
+    margin-right: 20px;
+  }
+  .primaryconbtn:nth-of-type(2) {
+    margin-right: 20px;
+  }
+}
+
 .primaryconbtn:hover {
   background-color: #f5edff;
 }
 
 .primaryconbtn:hover .buttonicon {
   color: #9356DC;
+}
+
+@media all and (min-width: 768px) and (max-width: 1000px) {
+  .primaryconbtn:hover .buttonicon {
+    color: transparent;
+  }
 }
 
 #n1 {
@@ -318,35 +380,68 @@ nav h1 {
   color: #7e7e7e;
 }
 
+@media all and (min-width: 768px) and (max-width: 1000px) {
+  .buttonicon {
+    color: transparent;
+  }
+}
+
 .fa-mobile-alt {
-  margin-right: -60px;
+  margin-right: -50px;
 }
 
 .fa-list-ul {
-  margin-right: -77px;
+  margin-right: -67px;
 }
 
 .fa-store {
-  margin-right: -75px;
+  margin-right: -65px;
 }
 
 #secondarycontainer {
   background-color: #f6f6f6;
   padding-bottom: 45px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+@media all and (min-width: 768px) {
+  #itemsline1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media all and (min-width: 768px) {
+  #itemsline2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 #secondarycontainer h1 {
-  margin-left: 6%;
+  margin-left: 1%;
   padding-top: 45px;
   margin-bottom: 25px;
 }
 
 figure {
-  margin: 0 5% 20px 5%;
+  margin: 0 0 20px 0;
   border-radius: 20px 20px 20px 20px;
   overflow: hidden;
   -webkit-box-shadow: 0px 3px 8px 2px #c8c8c8;
           box-shadow: 0px 3px 8px 2px #c8c8c8;
+}
+
+@media all and (min-width: 768px) {
+  figure {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 figure:hover {
@@ -368,10 +463,6 @@ figcaption {
   background-color: white;
   padding-bottom: 5px;
   margin-top: -53.1px;
-}
-
-#figcapsecondphoto {
-  margin-top: -153px;
 }
 
 .restaurantnames {
@@ -433,19 +524,13 @@ figcaption {
           transform: translate(0px, -26px);
 }
 
-#firstphoto, #thirdphoto, #fourthphoto {
+#firstphoto, #secondphoto, #thirdphoto, #fourthphoto {
   width: 100%;
   position: relative;
   bottom: 50px;
 }
 
-#secondphoto {
-  width: 100%;
-  position: relative;
-  bottom: 150px;
-}
-
-#secondarycontainer span {
+#firstnew, #secondnew {
   background-color: #99E2D0;
   border-radius: 3px;
   font-size: 0.8em;
@@ -455,7 +540,49 @@ figcaption {
   position: absolute;
   margin-top: 17px;
   padding: 5px 10px;
-  margin-left: 66%;
+  right: 10%;
+}
+
+@media all and (min-width: 431px) {
+  #firstnew, #secondnew {
+    font-size: 0.9em;
+  }
+}
+
+@media all and (min-width: 516px) {
+  #firstnew, #secondnew {
+    font-size: 1em;
+  }
+}
+
+@media all and (min-width: 621px) {
+  #firstnew, #secondnew {
+    font-size: 1.1em;
+  }
+}
+
+@media all and (min-width: 768px) {
+  #firstnew, #secondnew {
+    font-size: 0.9em;
+  }
+}
+
+@media all and (min-width: 900px) {
+  #firstnew, #secondnew {
+    font-size: 1em;
+  }
+}
+
+@media all and (min-width: 1080px) {
+  #firstnew, #secondnew {
+    font-size: 1em;
+  }
+}
+
+@media all and (min-width: 768px) {
+  #firstnew {
+    right: 55%;
+  }
 }
 
 footer {
