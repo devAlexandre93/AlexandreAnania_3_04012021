@@ -5,8 +5,10 @@
       <title>Le délice des sens</title>
       <!-- Viewport--> 
          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <!-- Icône navigateur-->   
+      <link rel="icon" href="images/logo/ohmyfood@2x.svg" />   
       <!-- Feuilles de styles-->    
-         <link rel="stylesheet" href="dart-sass/sass/Ohmyfoodmenu.css"/>
+         <link rel="stylesheet" href="css/Ohmyfoodmenu.css"/>
       <!-- Google Fonts -->
          <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
          <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">   
@@ -20,9 +22,9 @@
          <img id="logo" src="images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood">
       </header>    
       
-      <article>
+      <div class="photomenu">
          <img id="fourthphoto" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo Le délice des sens"/>
-      </article>
+      </div>
             
       <section class="primarycontainer"> <!-- Contient le menu -->
          <div class="item">
@@ -137,7 +139,7 @@
                </div>
             </div>
          </div>      
-         <input id="orderbtn" type="button" value="Commander" onclick="window.location.href =''"/>
+         <button class="orderbtn" type="button" onclick="window.location.href =''"> Commander </button>
       </section>
 
       <footer> <!--Contient "Proposer un restaurant", "Devenir partenaire",... -->
@@ -152,7 +154,7 @@
             <p> Mentions légales </p>
          </div>
          <div class="footercateg">
-            <p> Contact </p> 
+            <a href="mailto:"> Contact </a> 
          </div>
       </footer>
    </body>

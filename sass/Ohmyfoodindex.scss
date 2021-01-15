@@ -1,0 +1,418 @@
+// Imports 
+
+    @import "abstracts/_variables.scss";
+    @import "abstracts/_mixins.scss";
+    @import "abstracts/_animations.scss";
+
+//* Fonts *//
+
+    body {
+        font-family: $font_text;
+    }
+
+//* Cancellation of the style of link, margin, h1 and input *//
+
+    a {
+        text-decoration: none; 
+        color: black ;
+    }
+
+    body {
+        margin: 0 0 0 0;
+    }
+
+    h1 {
+        margin: 0 0 0 0;
+        font-size: 1.3em;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+//* Loader's style *// 
+
+    .loader {
+        position: fixed;
+        background: white;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: -1;
+        animation: 3s hidescreen;
+    }
+
+    .dotsbox {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 50%;
+    }
+
+    .fa-circle {
+        font-size: 1.6em;
+        margin-right: 2px;
+        animation: 1.5s dotsgone infinite ease-in-out backwards;
+    }
+
+    .circle1 {
+        color: $primary_color;
+    }
+
+    .circle2 {
+        color: $secondary_color;
+        animation-delay: 0.2s;
+    }
+
+    .circle3 {
+        color: $tertiary_color;
+        animation-delay: 0.4s;
+    }
+
+    .circle4 {
+        color: $secondary_color;
+        animation-delay: 0.6s;
+    }
+
+    .circle5 {
+        color: $primary_color;
+        animation-delay: 0.8s;
+    }
+
+//* Header's style *//
+
+    header {
+        padding: 20px 0 10px 0;
+        border-bottom: solid 1.8px rgb(170, 170, 170);
+    }
+
+    #logo {
+        display: block;
+        margin: 0 auto 0;
+        width: 180px;
+    }
+
+//* Nav's style *// 
+
+    nav {
+        text-align: center;
+    }
+
+    #navtopitem {
+        background-color: rgb(234, 234, 234);
+        color: rgb(53, 53, 53);  
+        font-weight: bold; 
+        font-size: 0.95em; 
+        border-top: solid 1.8px rgb(210, 210, 210);
+        display: flex;
+        justify-content: center;    
+    }
+        
+    #navtopitem p {
+        margin-right: 15px;
+    }
+
+    .fa-map-marker-alt {
+        margin: 14px 15px 0 0;
+    }
+
+    #navblock {
+        background-color: $background_color;
+        padding: 30px 0 55px 0; 
+        margin-bottom: 45px;
+    }
+
+    nav h2 {
+        margin: 0 0;
+        line-height: 1.2em; 
+        margin-bottom: 15px;
+    }
+
+    #navblock p {
+        color:  rgb(101, 101, 101); 
+        margin-bottom: 30px;
+    }
+
+    #navbtn {
+        @include button;
+        padding: 15px 22px;
+    }
+
+    #navbtn:hover {
+        @include buttonhover;
+    }
+
+//Primary container syle *//
+
+    #primarycontainer {
+        margin-bottom: 65px;
+    }
+
+    .containerbutton {
+        @media all and (min-width: 768px) {
+            display: flex;
+            margin: 0 6% 0 6%;
+        }
+    }
+
+    #primarycontainer h2 {
+        margin: 0px 0px 25px 6%;
+    }
+
+    #primarycontainer p {
+        font-weight: bold;
+        font-size: 0.9em;
+        margin-right: auto;
+        margin-left: auto;
+        @media all and (min-width: 768px) {
+        }       
+    }
+
+    .primaryconbtn {
+        display: flex;
+        background-color: $background_color;
+        margin: 0px 7% 25px 7%;
+        border-radius: 20px;
+        padding: 9px 0 8px 0;
+        box-shadow: 0px 3px 8px 2px rgb(230, 230, 230);
+        @media all and (min-width: 768px) {
+            width: 33%;
+            justify-content: center;
+            margin: 0 0 0 0;
+            &:nth-of-type(1) {
+                margin-right: 20px;
+            }
+            &:nth-of-type(2) {
+                margin-right: 20px;
+            }
+
+        }
+    }
+
+    .primaryconbtn:hover {
+        background-color: rgb(245, 237, 255);
+    }
+
+    .primaryconbtn:hover .buttonicon {
+        color: $primary_color;
+        @media all and (min-width: 768px) and (max-width:1000px) {
+            color: transparent;
+        }    
+    }
+
+    #n1 {
+        @include numberscircle;
+        margin-right: 25px;
+        margin-left: -9px;
+    }
+
+    #n2 {
+        @include numberscircle;
+        margin-right: 22px;
+        margin-left: -9px;
+    }
+
+    #n3 {
+        @include numberscircle;
+        margin-right: 22px;
+        margin-left: -9px;
+    }
+
+    .buttonicon {
+        margin-top: 17px;
+        font-size: 0.9em;
+        color: rgb(126, 126, 126);
+        @media all and (min-width: 768px) and (max-width:1000px) {
+            color: transparent;
+        }   
+    } 
+
+    .fa-mobile-alt {
+        margin-right: -50px;
+    }
+
+    .fa-list-ul{
+        margin-right: -67px;
+    }
+
+    .fa-store{
+        margin-right: -65px;
+    }
+
+//* Secondary container style *//
+
+    #secondarycontainer {
+        background-color: $background_color;
+        padding: 0 5% 45px;
+    }
+
+    #itemsline1 {
+        @media all and (min-width: 768px) {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
+    #itemsline2 {
+        @media all and (min-width: 768px) {
+            display: flex;
+        }
+    }
+
+
+    #secondarycontainer h2 {
+        margin: 0 0 20px 1%;
+        padding-top: 45px;
+    }
+
+    figure {
+        margin: 0 0 20px 0;
+        border-radius: 20px 20px 20px 20px;
+        overflow: hidden; 
+        box-shadow: 0px 3px 8px 2px rgb(200, 200, 200);
+        @media all and (min-width: 768px) {
+            margin: 0 10px 20px 10px;
+        }
+    }
+
+    figure:hover {
+        @include buttonhover
+    }
+
+    figcaption {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding-bottom: 5px;
+        margin-top: -53.1px;
+    }
+
+    .restaurantnames {
+        margin: 15px 0 5px 15px;
+        font-size: 1.1em;
+    }
+
+    #secondarycontainer p {
+        margin: 14px 0 10px 15px;
+    }
+
+    .hearts {
+        font-size: 1.6em;
+        margin: -16px 50px 0 0 ;
+        align-self: flex-end;
+    }
+
+    .far.fa-heart {
+        position: absolute;
+        padding: 0 1px 0;
+        z-index: 2;
+        &:hover {
+          transition: color 0.6s ease;
+          color: transparent;
+        }
+    }
+
+    .post-it {
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        background: white;
+        transition: all 0.4s ease-in-out;
+        z-index: 1;
+    }
+
+    .far.fa-heart:hover + .post-it {
+        transform: translate(0px, -26px);
+      }
+
+    .fas.fa-heart {
+        position: absolute;
+        padding: 0 1px 0;
+        background: linear-gradient(to top, $secondary_color, $primary_color);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    #firstphoto, #secondphoto, #thirdphoto, #fourthphoto {
+        width: 100%;
+        position: relative;
+        bottom: 50px;
+    }
+
+    #firstnew, #secondnew {
+        background-color: $tertiary_color;
+        border-radius: 3px;
+        font-size: 0.8em;
+        color: rgb(0, 135, 102);
+        font-weight: bold;
+        z-index: 1;
+        position: absolute;
+        margin-top: 17px;
+        padding : 5px 10px;
+        right: 10%;
+        @media all and (min-width:431px) {
+            font-size: 0.9em;        
+        }
+        @media all and (min-width:516px) {
+            font-size: 1em;        
+        }
+        @media all and (min-width:621px) {
+            font-size: 1.1em;        
+        }
+        @media all and (min-width:768px) {
+            font-size: 0.9em;        
+        }
+        @media all and (min-width:900px) {
+            font-size: 1em;        
+        }
+        @media all and (min-width:1080px) {
+            font-size: 1em;        
+        }
+    }
+
+    #firstnew {
+        @media all and (min-width:768px) {
+            right:55%        
+        }
+    }
+
+//* Footer's style *//
+
+    footer {
+        background-color: $footer_color; 
+        color: white;
+        padding: 25px 0px 20px 6% ;
+    }
+
+    footer h1 {
+        font-family: $font_title; 
+        font-weight: normal; 
+        margin-bottom: 15px;
+    }
+
+    footer p {
+        margin: 0 0 8px 0;
+    }
+
+    footer a {
+        color: white;
+    }
+
+    .fa-utensils {
+        margin: 0 8px 0 2px;
+        font-size: 0.8em;
+    }
+
+    .fa-hands-helping {
+        margin-right: 4px;
+        font-size: 0.8em;
+        transform: rotate(-10deg);
+    }
+
+
+
+
